@@ -17,8 +17,8 @@ var getElementsByClassName = function(className) {
 	  	if (hasClass(bod, className)){
 	  		results.push(bod);
 	  	}
-	  	if(bod.children.length > 0){
-		  	for (var i=0; i<bod.children.length; i++){
+	  	if(bod.childNodes.length > 0){
+		  	for (var i=0; i<bod.childNodes.length; i++){
 		  		if (bod.children[i] !== undefined && !hasClass(bod.children[i], 'failures') && !hasClass(bod.children[i], 'duration') && !hasClass(bod.children[i], 'passes')
 		  			 && !hasClass(bod.children[i], 'progress')){
 			  		findInParent(bod.children[i]);
